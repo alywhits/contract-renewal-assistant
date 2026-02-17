@@ -1,0 +1,21 @@
+services:
+  app:
+    image: python:3.12-slim
+    container_name: app
+    command: sleep infinity
+    volumes:
+      - ./app:/app
+    working_dir: /app
+
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: postgres
+    environment:
+      POSTGRES_USER: contract_rw
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: contract_renewal_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db:/var/lib/postgresql/data
+
