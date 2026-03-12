@@ -149,8 +149,8 @@ Environment:
 
 ### 1. Clone the repository
 
-```git clone https://github.com/alywhits/contract-renewal-assistant.git 
-cd contract-renewal-assistant```
+`git clone https://github.com/alywhits/contract-renewal-assistant.git' 
+cd contract-renewal-assistant`
 
 ### 2. Start PostgreSQL (Docker)
 
@@ -164,8 +164,8 @@ This will start:
 
 ### 3. Create and activate Python virtual environment
 
-```python3 -m venv venv  
-source venv/bin/activate```
+`python3 -m venv venv` 
+`source venv/bin/activate`
 
 ### 4. Install dependencies
 
@@ -175,8 +175,8 @@ source venv/bin/activate```
 
 Create a `.env` file in the root directory:
 
-```OPENAI_API_KEY=your_api_key_here  
-POSTGRES_PASSWORD=your_db_password```
+`OPENAI_API_KEY=your_api_key_here` 
+`POSTGRES_PASSWORD=your_db_password`
 
 ### 6. Run the application
 
