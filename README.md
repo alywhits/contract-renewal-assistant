@@ -173,7 +173,7 @@ docker compose up -d
 ### 3. Generate Policy Embeddings
 After the database is running, generate embeddings for policy documents by running:
 ```
-python app/policy_ingestion.py
+python3 app/policy_ingestion.py
 ```
 This reads markdown files from `app/policies/` and stored embeddings in the `policy_embeddings` table.
 
