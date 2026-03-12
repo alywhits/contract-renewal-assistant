@@ -159,7 +159,7 @@ def synthesize_rag_answer(user_query: str, retrieved_sections: list) -> str:
     """
 
     context_blocks = []
-    for doc, section, content in retrieved_sections:
+    for doc, section, content, _ in retrieved_sections:
         context_blocks.append(
             f"Document: {doc}\nSection: {section}\n{content}"
         )

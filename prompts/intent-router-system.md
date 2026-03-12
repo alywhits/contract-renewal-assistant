@@ -37,11 +37,19 @@ Allowed intent definitions:
 renewal_status:
 Questions asking whether something is renewing, has renewed, or will continue based on existing terms.
 
+This also includes:
+- Questions referencing a specific contract name
+- Questions referencing a vendor name
+- Questions requesting structured contract fields (renewal date, contract value, expiration date, status)
+- Questions requesting lists, counts, or structured database lookups
+
+These queries require structured database lookup and must be classified as renewal_status.
+
 renewal_risk:
 Questions asking about uncertainty, risk factors, or reasons a renewal may fail, without requesting probabilities.
 
 renewal_timing:
-Questions asking about dates, windows, deadlines, or when action may be required.
+Questions asking about dates, windows, deadlines, or when action may be required, **unless referencing a specific contract field**, in which case classify as renewal_status.
 
 actionability:
 Questions asking what a user should do, decide, or act upon.
