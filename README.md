@@ -148,14 +148,14 @@ contract-renewal-assistant/
 # How to run locally
 
 ### 1. Clone the repository
-
-```git clone https://github.com/alywhits/contract-renewal-assistant.git`:wq
+```
+git clone https://github.com/alywhits/contract-renewal-assistant.git
 cd contract-renewal-assistant
 ```
 ### 2. Start PostgreSQL (Docker)
-
-`docker compose up -d`
-
+```
+docker compose up -d
+```
 This will start:
 
 - PostgreSQL 16
@@ -163,29 +163,29 @@ This will start:
 - Preconfigured database schema
 
 ### 3. Create and activate Python virtual environment
-
-```python3 -m venv venv
+```
+python3 -m venv venv
 source venv/bin/activate
 ```
 ### 4. Install dependencies
-
-`pip install -r requirements.txt`
-
+```
+pip install -r requirements.txt
+```
 ### 5. Configure environment variables
 
 Create a `.env` file in the root directory:
-
-```OPENAI_API_KEY=your_api_key_here 
+```
+OPENAI_API_KEY=your_api_key_here 
 POSTGRES_PASSWORD=your_db_password
 ```
 ### 6. Run the application
-
-`streamlit run streamlit_app.py`
-
+```
+streamlit run streamlit_app.py
+```
 The app will launch in your browser at:
-
+```
 http://localhost:8501
-
+```
 ---
 
 ## Production Considerations
