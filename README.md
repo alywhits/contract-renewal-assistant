@@ -160,25 +160,40 @@ This will start:
 
 - PostgreSQL 16
 - pgvector extension enabled
-- Preconfigured database schema
+- Required tabled
+- Sample employee and contract data
 
-### 3. Create and activate Python virtual environment
+The schema and seed data are created automatically from SQL files in the `init/` directory.
+
+If you need to reset the database:
+```
+docker compose down -v
+docker compose up -d
+```
+### 3. Generate Policy Embeddings
+After the database is running, generate embeddings for policy documents by running:
+```
+python app/policy_ingestion.py
+```
+This reads markdown files from `app/policies/` and stored embeddings in the `policy_embeddings` table.
+
+### 4. Create and activate Python virtual environment
 ```
 python3 -m venv venv
 source venv/bin/activate
 ```
-### 4. Install dependencies
+### 5. Install dependencies
 ```
 pip install -r requirements.txt
 ```
-### 5. Configure environment variables
+### 6. Configure environment variables
 
 Create a `.env` file in the root directory:
 ```
 OPENAI_API_KEY=your_api_key_here 
 POSTGRES_PASSWORD=your_db_password
 ```
-### 6. Run the application
+### 7. Run the application
 ```
 streamlit run streamlit_app.py
 ```
